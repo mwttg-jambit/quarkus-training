@@ -1,14 +1,14 @@
 ### findAll
-GET http://localhost:8080/customer
+GET http://localhost:8080/api/customer
 
 ### findById (valid)
-GET http://localhost:8080/customer/1
+GET http://localhost:8080/api/customer/1
 
 ### findById (not available)
-GET http://localhost:8080/customer/-666
+GET http://localhost:8080/api/customer/-666
 
 ### save
-POST http://localhost:8080/customer
+POST http://localhost:8080/api/customer
 Content-Type: application/json
 
 {
@@ -18,4 +18,4 @@ Content-Type: application/json
 }
 
 ### remove
-DELETE http://localhost:8080/customer/2
+DELETE http://localhost:8080/api/customer/2
