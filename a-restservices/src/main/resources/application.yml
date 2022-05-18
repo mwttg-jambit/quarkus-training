@@ -11,3 +11,11 @@ at:
     name: "Peter"
     email: "Peter@office.de"
     address: "Germany"
+
+"%profile-A":
+  jambit:
+    message: "Hello Profile A"
+
+"%profile-B":
+  jambit:
+    message: "Hello Profile B"
