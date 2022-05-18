@@ -12,7 +12,7 @@ POST http://localhost:8080/api/customer
 Content-Type: application/json
 
 {
-  "name": "Peter",
+  "name": "A",
   "status": "VIP",
   "dateOfBirth": "1998-04-01"
 }
