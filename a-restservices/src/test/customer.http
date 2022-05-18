@@ -1,0 +1,21 @@
+### findAll
+GET http://localhost:8080/customer
+
+### findById (valid)
+GET http://localhost:8080/customer/1
+
+### findById (not available)
+GET http://localhost:8080/customer/-666
+
+### save
+POST http://localhost:8080/customer
+Content-Type: application/json
+
+{
+  "name": "Peter",
+  "status": "VIP",
+  "dateOfBirth": "1998-04-01"
+}
+
+### remove
+DELETE http://localhost:8080/customer/2
