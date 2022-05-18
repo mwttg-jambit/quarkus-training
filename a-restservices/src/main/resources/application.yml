@@ -5,3 +5,9 @@ quarkus:
 
 jambit:
   message: "Hello Universe"
+
+at:
+  java:
+    name: "Peter"
+    email: "Peter@office.de"
+    address: "Germany"

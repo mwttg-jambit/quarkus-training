@@ -1,5 +1,6 @@
 package com.jambit;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -12,9 +13,12 @@ public class ExampleResource {
   @ConfigProperty(name = "jambit.message")
   String message;
 
+  @Inject
+  AtJava atJava;
+
   @GET
   @Produces(MediaType.TEXT_PLAIN)
   public String hello() {
-    return message;
+    return message + " " + atJava.name() + " " + atJava.address() + " " + atJava.email();
   }
 }
