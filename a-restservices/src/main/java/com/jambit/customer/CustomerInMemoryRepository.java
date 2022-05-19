@@ -1,5 +1,6 @@
 package com.jambit.customer;
 
+import com.jambit.interceptors.MeasurePerformance;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @ApplicationScoped
 @Slf4j
+@MeasurePerformance
 public class CustomerInMemoryRepository implements CustomerRepository {
 
   private final Map<Long, Customer> storage = new HashMap<>();

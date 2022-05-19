@@ -1,6 +1,7 @@
 package com.jambit.customer;
 
 import com.jambit.events.CustomerCreateEvent;
+import com.jambit.interceptors.MeasurePerformance;
 import java.time.Instant;
 import java.util.List;
 import javax.enterprise.event.Event;
@@ -17,6 +18,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/api/customer")
+@MeasurePerformance
 public class CustomerResource {
 
   @Inject
