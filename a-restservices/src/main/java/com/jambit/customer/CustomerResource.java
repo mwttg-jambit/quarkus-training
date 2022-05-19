@@ -1,6 +1,9 @@
 package com.jambit.customer;
 
+import com.jambit.events.CustomerCreateEvent;
+import java.time.Instant;
 import java.util.List;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
@@ -18,6 +21,9 @@ public class CustomerResource {
 
   @Inject
   CustomerRepository customerRepository;
+
+  @Inject
+  Event<CustomerCreateEvent> createEvent;
 
   @GET
   @Produces(MediaType.APPLICATION_JSON)
@@ -43,6 +49,14 @@ public class CustomerResource {
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.APPLICATION_JSON)
   public Customer save(@Valid final Customer customer) {
-    return customerRepository.save(customer);
+    final var isNewCustomer = customer.getId() == null;
+    final var savedCustomer =  customerRepository.save(customer);
+
+    if (isNewCustomer) {
+      final var event = new CustomerCreateEvent(Instant.now(), savedCustomer.getId());
+      createEvent.fireAsync(event);
+    }
+
+    return savedCustomer;
   }
 }
