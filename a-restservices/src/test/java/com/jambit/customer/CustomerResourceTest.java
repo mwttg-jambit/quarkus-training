@@ -1,44 +1,37 @@
 package com.jambit.customer;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import io.quarkus.test.junit.QuarkusTest;
+import io.quarkus.test.junit.mockito.InjectMock;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.hamcrest.CoreMatchers;
+import java.time.LocalDate;
+import java.util.List;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 @QuarkusTest
-class CustomerResourceTest {
+public class CustomerResourceTest {
 
-  private static final String PATH = "api/customer";
+  @InjectMock
+  CustomerRepository mockRepository; // create Mockito Mock and inject (where repository is used)
+
+  @BeforeEach
+  void setUp() {
+    Mockito.when(mockRepository.findAll()).thenReturn(List.of(new Customer(123L, "Name", LocalDate.of(1998, 12, 1), Customer.Status.VIP)));
+  }
 
   @Test
-  void findAll() {
+  void testFindAll() {
     final Response response = RestAssured.given()
         .when()
         .header("accept", "application/json")
-        .get(PATH);
+        .get("api/customer");
 
     final Customer[] result = response.as(Customer[].class);
 
-    response.then()
-        .header("Content-Type", "application/json;charset=UTF-8")
-        .and()
-        .statusCode(200)
-        .and()
-        .body("size()", CoreMatchers.is(1));
-  }
-
-  @Test
-  void findById() {
-  }
-
-  @Test
-  void remove() {
-  }
-
-  @Test
-  void save() {
+    Assertions.assertEquals(result.length, 1);
+    Assertions.assertEquals(result[0].getId(), 123L);
   }
 }
