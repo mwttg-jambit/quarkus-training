@@ -1,0 +1,15 @@
+quarkus:
+  datasource:
+    db-kind: mariadb
+    username: customers
+    password: customers
+    jdbc:
+      url: jdbc:mariadb://localhost:3306/customers
+      driver: org.mariadb.jdbc.Driver
+      min-size: 5
+      max-size: 7
+  hibernate-orm:
+    log:
+      sql: true
+    database:
+      generation: update
