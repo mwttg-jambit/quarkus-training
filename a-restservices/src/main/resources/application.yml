@@ -2,6 +2,8 @@ quarkus:
   http:
     port: 8080
     cors: true
+  package:
+    type: uber-jar
 
 jambit:
   message: "Hello Universe"
