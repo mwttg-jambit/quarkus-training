@@ -1,0 +1,8 @@
+### GET all customers
+GET http://localhost:8080/api/customer
+
+### GET all customers blocking
+GET http://localhost:8080/api/customer?block=true
+
+### GET all customers failing
+GET http://localhost:8080/api/customer?fail=true
