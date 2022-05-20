@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/a-restservices/a-restservices.iml" filepath="$PROJECT_DIR$/a-restservices/a-restservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/b-persistence/b-persistence.iml" filepath="$PROJECT_DIR$/b-persistence/b-persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-fault-tolerant-client/c-fault-tolerant-client.iml" filepath="$PROJECT_DIR$/c-fault-tolerant-client/c-fault-tolerant-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c-fault-tolerant-server/c-fault-tolerant-server.iml" filepath="$PROJECT_DIR$/c-fault-tolerant-server/c-fault-tolerant-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/d-kafka-receiver/d-kafka-receiver.iml" filepath="$PROJECT_DIR$/d-kafka-receiver/d-kafka-receiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/d-kafka-sender/d-kafka-sender.iml" filepath="$PROJECT_DIR$/d-kafka-sender/d-kafka-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/e-reactive/e-reactive.iml" filepath="$PROJECT_DIR$/e-reactive/e-reactive.iml" />
     </modules>
   </component>
 </project>

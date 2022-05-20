@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="a-restservices" />
+        <module name="d-kafka-receiver" />
+        <module name="c-fault-tolerant-server" />
+        <module name="e-reactive" />
+        <module name="b-persistence" />
+        <module name="c-fault-tolerant-client" />
+        <module name="d-kafka-sender" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a-restservices" target="11" />
+      <module name="b-persistence" target="11" />
+      <module name="c-fault-tolerant-client" target="11" />
+      <module name="c-fault-tolerant-server" target="11" />
+      <module name="d-kafka-receiver" target="11" />
+      <module name="d-kafka-sender" target="11" />
+      <module name="e-reactive" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="a-restservices" options="-parameters" />
+      <module name="b-persistence" options="-parameters" />
+      <module name="c-fault-tolerant-client" options="-parameters" />
+      <module name="c-fault-tolerant-server" options="-parameters" />
+      <module name="d-kafka-receiver" options="-parameters" />
+      <module name="d-kafka-sender" options="-parameters" />
+      <module name="e-reactive" options="-parameters" />
+    </option>
+  </component>
+</project>

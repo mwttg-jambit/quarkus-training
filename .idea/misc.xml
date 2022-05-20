@@ -7,6 +7,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/a-restservices/pom.xml" />
+        <option value="$PROJECT_DIR$/b-persistence/pom.xml" />
+        <option value="$PROJECT_DIR$/c-fault-tolerant-server/pom.xml" />
+        <option value="$PROJECT_DIR$/c-fault-tolerant-client/pom.xml" />
+        <option value="$PROJECT_DIR$/d-sender/d-kafka-sender/pom.xml" />
+        <option value="$PROJECT_DIR$/d-kafka-receiver/pom.xml" />
+        <option value="$PROJECT_DIR$/d-kafka-sender/pom.xml" />
+        <option value="$PROJECT_DIR$/e-reactive/pom.xml" />
       </list>
     </option>
   </component>
