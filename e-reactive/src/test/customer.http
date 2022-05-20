@@ -1,0 +1,9 @@
+### save
+PUT http://localhost:8080/api/customer
+Content-Type: application/json
+
+{
+  "name": "a new customer",
+  "status": "VIP",
+  "dateOfBirth": "1998-04-01"
+}
