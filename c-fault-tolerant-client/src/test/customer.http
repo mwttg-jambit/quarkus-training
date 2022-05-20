@@ -1,0 +1,14 @@
+### count customers
+GET http://localhost:8081/api/customers/counter
+
+### count customers fail with retry
+GET http://localhost:8081/api/customers/counter/retry
+
+### count customers fail with fallback
+GET http://localhost:8081/api/customers/counter/fallback
+
+### count customers fail with timeout
+GET http://localhost:8081/api/customers/counter/timeout
+
+### count customers fail with circuit breaker
+GET http://localhost:8081/api/customers/counter/circuit-breaker
